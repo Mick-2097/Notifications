@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+    <h1>Document Rejected Signature Sms Notification</h1>
+    <form
+      action="http://localhost/test/notifications/show?class=\App\Notifications\Documents\DocumentRejectedSignatureSmsNotification"
+      method="post"
+    >
+      <input
+        type="hidden"
+        name="_token"
+        value="rRx7seuyKmxn0BUW7OjfcyPqkz1FFIg3UYjQJxS2"
+      />
+      <table>
+        <tbody>
+          <tr>
+            <th>Parameters</th>
+          </tr>
+          <tr>
+            <td>document * (ID)</td>
+            <td>
+              <input id="input" name="document" type="text" value="1" />
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>signer * (ID)</td>
+            <td>
+              <input id="input" name="signer" type="text" value="1" />
+            </td>
+            <td>
+              <select id="input" name="signer_type">
+                <option value="App\Models\Contact">Contact</option>
+                <option value="App\Models\User">User</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>Notifiable (User ID)</th>
+            <td>
+              <input id="input" name="user_id" type="number" value="1" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <input id="input" type="hidden" name="render" value="1" />
+      <input type="submit" value="Render" />
+    </form>
+    <script>
+      const newURL = new URL("https://thisisyourbit.com")
+      const inputs = document.querySelectorAll("#input")
+      inputs.forEach((x) => {
+        newURL.searchParams.set(x.name, x.value)
+        x.addEventListener("change", (updateValue) => {
+          newURL.searchParams.set(x.name, x.value)
+          console.log(newURL.toString())
+        })
+      })
+    </script>
+  </body>
+</html>

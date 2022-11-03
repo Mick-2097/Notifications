@@ -1,0 +1,5 @@
+1) For the page with buttons, buttons have to be a hrefs
+2) the number of inputs is always diffferent from 2 to 5
+3) The number of buttons from 1 - 3
+4) hfres should have a query containing the input's values ?input_1_name=input_1_value&input_2_name=input_2_value
+5) They should change on input change.
