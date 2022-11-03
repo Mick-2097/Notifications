@@ -96,16 +96,9 @@ const showlist = (catagory) => {
     //////////////////////////////////////////////
     //////////////////////////////////////////////
     //  Build hrefs here
-    newLink.setAttribute(
-      "href",
-      `http://localhost/test/notifications/show?class=\\App\\Notifications\\Documents\\${x.replace(
-        / /g,
-        ""
-      )}`
-    )
+    newLink.setAttribute("href", "#")
     //////////////////////////////////////////////
     //////////////////////////////////////////////
-    newLink.classList.add("text-xl")
     newLink.innerText = x
     newListItem.append(newLink)
     listArea.append(newListItem)

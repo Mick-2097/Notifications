@@ -4,8 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "hex-image":
-          "url('https://raw.githubusercontent.com/Mick-2097/Notifications/white-clean-hex/SL-051919-20420-09.jpg')",
+        "hex-image": "url('/white-clean-hex/SL-051919-20420-09.jpg')",
       },
     },
   },
