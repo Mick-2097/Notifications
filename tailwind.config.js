@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         "hex-image":
-          "url('https://raw.githubusercontent.com/Mick-2097/white-clean-hex/SL-051919-20420-09.jpg')",
+          "url('https://raw.githubusercontent.com/Mick-2097/Notifications/white-clean-hex/SL-051919-20420-09.jpg')",
       },
     },
   },
