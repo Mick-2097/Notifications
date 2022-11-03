@@ -47,17 +47,27 @@
         </tbody>
       </table>
       <input id="input" type="hidden" name="render" value="1" />
-      <input type="submit" value="Render" />
+      <input id="submit" type="submit" value="Render" />
     </form>
     <script>
       const newURL = new URL("https://thisisyourbit.com")
       const inputs = document.querySelectorAll("#input")
+      const sub = document.querySelector("#submit")
       inputs.forEach((x) => {
-        newURL.searchParams.set(x.name, x.value)
+        x.value = ""
         x.addEventListener("change", (updateValue) => {
           newURL.searchParams.set(x.name, x.value)
-          console.log(newURL.toString())
+          sub.setAttribute("href", newURL.toString())
         })
+      })
+      sub.addEventListener("click", (e) => {
+        e.preventDefault()
+        if (e.target.getAttribute("href")) {
+          console.log(e.target.getAttribute("href"))
+        } else {
+          alert("All fields required")
+          console.warn("All fields required")
+        }
       })
     </script>
   </body>
