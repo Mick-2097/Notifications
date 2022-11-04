@@ -395,7 +395,6 @@ const newURL = new URL("https://thisisyourbit.com")
 
 let setURL = () => {
   let count = 0
-
   document.querySelectorAll(".input").forEach((x) => {
     if (!x.value) {
       document.querySelector("#submit").setAttribute("href", null)
@@ -412,10 +411,8 @@ let setURL = () => {
       })
     }
   })
-
   document.querySelectorAll(".input").forEach((x) => {
     newURL.searchParams.delete(x.name)
   })
-
   console.log(document.querySelector("#submit").getAttribute("href"))
 }
