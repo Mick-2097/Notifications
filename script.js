@@ -320,7 +320,7 @@ subButton.classList.add(
 subButton.setAttribute("type", "button")
 subButton.setAttribute("id", "submit")
 subButton.setAttribute("onclick", "setURL()")
-subButton.innerText = "I'm a button, ladi da"
+subButton.innerText = "console log URL"
 //-----------------------------------------------//
 
 //  Render sidebar buttons
@@ -369,19 +369,23 @@ const showlist = (catagory) => {
 //  Render form
 const buildForm = (key, value) => {
   formArea.classList.remove("border")
-  formArea.innerText = ""
-  formArea.classList.add("border")
-  const formName = document.createElement("h1")
-  formName.classList.add("text-xl", "my-8")
-  formName.innerText = value
-  formArea.append(formName)
-  if (key.slice(0, 1) === "o") formArea.append(tokenInput)
-  if (key.slice(1, 2) === "o") formArea.append(docIdLabel)
-  if (key.slice(2, 3) === "o") formArea.append(signerIdLabel)
-  if (key.slice(3, 4) === "o") formArea.append(signerSelect)
-  if (key.slice(4, 5) === "o") formArea.append(userIdLabel)
-  if (key.slice(5, 6) === "o") formArea.append(renderInput)
-  formArea.append(subButton)
+  formArea.textContent = ""
+  setTimeout(() => {
+    formArea.classList.add("border")
+    const formName = document.createElement("h1")
+    formName.classList.add("my-8")
+    formName.innerText = value
+    formArea.append(formName)
+    const hRule = document.createElement("hr")
+    formArea.append(hRule)
+    if (key.slice(0, 1) === "o") formArea.append(tokenInput)
+    if (key.slice(1, 2) === "o") formArea.append(docIdLabel)
+    if (key.slice(2, 3) === "o") formArea.append(signerIdLabel)
+    if (key.slice(3, 4) === "o") formArea.append(signerSelect)
+    if (key.slice(4, 5) === "o") formArea.append(userIdLabel)
+    if (key.slice(5, 6) === "o") formArea.append(renderInput)
+    formArea.append(subButton)
+  }, 200)
 }
 
 document.querySelectorAll(".input").forEach((x) => {
