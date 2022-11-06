@@ -81,18 +81,10 @@
       let setURL = () => {
         params.forEach((x) => {
           newURL.searchParams.set(x.name, x.value)
-          console.log(newURL.toString())
         })
+        console.log(newURL.toString())
         sub.setAttribute("href", newURL.toString())
       }
-      sub.addEventListener("click", (e) => {
-        inputs.forEach((x) => {
-          if (!x.value) {
-            x.style.outline = "red 2px solid"
-            e.preventDefault()
-          }
-        })
-      })
     </script>
   </body>
 </html>

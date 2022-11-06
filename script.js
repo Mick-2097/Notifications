@@ -328,11 +328,12 @@ catagories.forEach((x) => {
   let newButton = document.createElement("button")
   newButton.classList.add(
     "border",
-    "border-slate-300",
+    "border-slate-200",
     "rounded",
     "py-1",
     "px-4",
-    "hover:bg-slate-500",
+    "bg-slate-500",
+    "hover:bg-slate-700",
     "hover:text-slate-50",
     "hover:border-slate-50",
     "focus:text-slate-800",

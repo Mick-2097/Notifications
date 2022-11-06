@@ -22,17 +22,17 @@
   <!-- INCLUDE STYLES FOR JAVASCRIPT RENDERED ELEMENTS HERE -->
   <div
     aria-hidden="true"
-    class="hidden hover:bg-slate-500 hover:text-slate-50 focus:border-slate-800 focus:text-slate-800 border border-slate-300 rounded text-xl w-full my-8 self-center mt-2"
+    class="hidden hover:bg-slate-700 hover:text-slate-50 focus:border-slate-800 focus:text-slate-800 border border-slate-300 rounded text-xl w-full my-8 self-center mt-2 bg-slate-500"
   >
     <div class="w-1/2 bg-slate-400 text-slate-900"></div>
   </div>
   <!-- //////////////////////////////////////////////////// -->
   <body class="m-0 p-0">
     <main
-      class="flex flex-col h-screen w-screen box-border overflow-scroll text-slate-300"
+      class="flex flex-col h-screen w-screen box-border overflow-scroll text-slate-200"
     >
       <nav
-        class="bg-slate-600 py-2 border-b-2 border-slate-800 flex justify-center w-screen"
+        class="gradedH py-2 border-b-2 border-slate-500 flex justify-center w-screen"
       >
         <h1 class="cursor-default text-2xl font-extrabold">Notifications</h1>
       </nav>
@@ -40,7 +40,7 @@
       <div id="row" class="flex flex-grow">
         <div
           id="sidebar"
-          class="bg-slate-600 flex flex-col gap-3 w-52 pt-4 px-2 border-r border-slate-900"
+          class="edge gradedV flex flex-col gap-3 w-52 pt-4 px-2"
         ></div>
         <div
           id="content"
@@ -82,7 +82,34 @@
       input:-webkit-autofill:hover,
       input:-webkit-autofill:focus,
       input:-webkit-autofill:active {
+        box-shadow:  0 0 0 30px rgb(148 163 184) inset !important;
         -webkit-box-shadow: 0 0 0 30px rgb(148 163 184) inset !important;
+      }
+      .edge {
+        border-right: 3px solid;
+        border-image: linear-gradient(
+          to bottom,
+          rgb(148 163 184),
+          rgb(71 85 105),
+          rgb(148 163 184)
+        );
+        border-image-slice: 10;
+      }
+      .gradedV {
+        background-image: linear-gradient(
+          to bottom,
+          rgb(30 41 59),
+          rgb(71 85 105),
+          rgb(30 41 59)
+        );
+      }
+      .gradedH {
+        background-image: linear-gradient(
+          to right,
+          rgb(30 41 59),
+          rgb(71 85 105),
+          rgb(30 41 59)
+        );
       }
     </style>
     <script src="/script.js"></script>
