@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./show.html"],
+  content: ["./index.html"],
   theme: {
     extend: {
       backgroundImage: {
-        "hex-image": "url('/white-clean-hex/SL-051919-20420-09.jpg')",
+        "hex-image": "url('https://mick-2097.github.io/Notifications/white-clean-hex/SL-051919-20420-09.jpg')",
       },
     },
   },
